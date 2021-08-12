@@ -1,1 +1,1 @@
-# hepburn-discord-bot
+# MTG card fetcher bot
