@@ -22,7 +22,7 @@ async def on_message(message):
         async with aiohttp.ClientSession() as session:
             async with session.get(card['image_uris']['large']) as resp:
                 if resp.status != 200:
-                    return await message.channel.send('Could not get the card image')
+                    return await message.channel.send('Could not get the card information, maybe you wrote the name wrong?')
                 data = io.BytesIO(await resp.read())
                 await message.channel.send(file=discord.File(data, 'card.png'))
 
